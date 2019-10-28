@@ -30,7 +30,7 @@ export class UserAdmin extends React.Component {
 												<h3>Hurojas.rios@gmail.com</h3>
 											</div>
 
-											<div className="icon4">
+											<div className="icon4 ">
 												<i className="fas fa-calendar-alt" />
 												<h3>Fecha Nacimiento</h3>
 
