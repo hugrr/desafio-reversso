@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import PropTypes from "prop-types";
 import "../../styles/home.scss";
 
 export class Home extends React.Component {
 	constructor(props) {
 		super(props);
+		this.props.history;
 		this.state = {
 			userName: "",
 			pass: "",
@@ -62,11 +64,14 @@ export class Home extends React.Component {
 																type="submit"
 																value="Sign In"
 																onClick={() => {
-																	actions.saveLogin({
-																		userName: this.state.userName,
-																		pass: this.state.pass,
-																		email: this.state.email
-																	});
+																	actions.saveLogin(
+																		{
+																			userName: this.state.userName,
+																			pass: this.state.pass,
+																			email: this.state.email
+																		},
+																		this.props.history
+																	);
 																}}
 															/>
 														</span>
@@ -88,3 +93,6 @@ export class Home extends React.Component {
 		);
 	}
 }
+Home.propTypes = {
+	history: PropTypes.object
+};
