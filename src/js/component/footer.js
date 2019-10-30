@@ -7,7 +7,7 @@ export const Footer = () => (
 				<p className="pull-left">
 					<small className="block">&copy; 2019 by Hugrr All Rights Reserved.</small>
 					<br />
-					<small className="block"> Diseñado para postulaciaon HC Partner(Sáltala) </small>
+					<small className="block"> Diseñado para postulaciaon Reversso SpA </small>
 				</p>
 			</div>
 		</div>
